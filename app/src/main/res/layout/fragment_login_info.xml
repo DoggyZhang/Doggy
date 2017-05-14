@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.widget.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Login Info"
+            android:textColor="@color/md_black_1000"
+            android:textSize="@dimen/text_title_size"
+            android:textStyle="italic|bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_login_info_userIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:padding="@dimen/divider"
+                fresco:roundAsCircle="true"
+                fresco:viewAspectRatio="1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/divider"
+                android:layout_weight="1"
+                android:background="@drawable/bg_black_circle_rect"
+                android:gravity="right|center_vertical"
+                android:padding="@dimen/divider"
+                android:text="User:"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/text_title_size" />
+
+            <TextView
+                android:id="@+id/tv_login_info_userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/divider"
+                android:layout_weight="1"
+                android:background="@drawable/bg_empty_grey"
+                android:gravity="left|center_vertical"
+                android:padding="@dimen/divider"
+                android:text="@string/app_name"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/text_title_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/divider"
+                android:layout_weight="1"
+                android:background="@drawable/bg_black_circle_rect"
+                android:gravity="right|center_vertical"
+                android:padding="@dimen/divider"
+                android:text="Last Login Time"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/text_title_size" />
+
+            <TextView
+                android:id="@+id/tv_login_info_logintime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/divider"
+                android:layout_weight="1"
+                android:background="@drawable/bg_empty_grey"
+                android:gravity="left|center_vertical"
+                android:padding="@dimen/divider"
+                android:text="@string/app_name"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/text_title_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_login_info_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:padding="@dimen/divider"
+                fresco:roundAsCircle="true"
+                fresco:viewAspectRatio="1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.widget.BounceScrollView>

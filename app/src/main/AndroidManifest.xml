@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.news">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTop">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.gank.activity.GankDetailActivity"
+            android:launchMode="singleTop"></activity>
+
+
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:launchMode="singleTop"></activity>
+
+        <activity
+            android:name=".ui.search.SearchDetailActivity"
+            android:launchMode="singleTop"></activity>
+
+        <activity
+            android:name=".ui.other.picture.PictureActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".ui.other.calendar.CalendarActivity"
+            android:launchMode="singleTop"></activity>
+
+        <activity
+            android:name=".ui.my.login.LoginActivity"
+            android:launchMode="standard">
+
+        </activity>
+
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"></activity>
+    </application>
+
+</manifest>

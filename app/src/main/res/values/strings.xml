@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Doggy News</string>
+    <string name="uri_logo">res://com.news/R.mipmap/ic_logo</string>
+
+    <string name="main_tab_home">主页</string>
+    <array name="home_tab">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>前端</item>
+    </array>
+
+    <string name="main_tab_recommend">推荐</string>
+    <string name="main_tab_find">发现</string>
+    <string name="main_tab_my">我的</string>
+
+    <string name="my_sign_in">点我登录</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="my_clear_cache">清理缓存</string>
+    <string name="my_about">关于应用</string>
+    <string name="my_sign_out">退出登录</string>
+
+    <string name="loading">Loading</string>
+    <string name="loadMore">加载更多</string>
+    <string name="loadError">加载出错啦</string>
+
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    
+    <string name="login_visitor">游客登录</string>
+    <string name="login_wechat">微信登录</string>
+    <string name="login_weibo">新浪微博登录</string>
+
+    <string name="bye_burger_bottom_behavior">com.news.behaviour.byeburgernavigationview.ByeBurgerBottomBehavior</string>
+    <string name="bye_burger_title_behavior">com.news.behaviour.byeburgernavigationview.ByeBurgerTitleBehavior</string>
+</resources>

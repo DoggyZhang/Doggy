@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_recommend_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/divider"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/divider"
+                    android:gravity="center"
+                    android:text="选择推荐日期："
+                    android:textColor="@color/md_grey_900" />
+
+                <TextView
+                    android:id="@+id/tv_calendar_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_black_circle_rect"
+                    android:gravity="center"
+                    android:padding="@dimen/divider"
+                    android:text="2017"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/text_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_calendar_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/divider"
+                    android:layout_marginRight="@dimen/divider"
+                    android:background="@drawable/bg_black_circle_rect"
+                    android:gravity="center"
+                    android:padding="@dimen/divider"
+                    android:text="04"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/text_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_calendar_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_black_circle_rect"
+                    android:gravity="center"
+                    android:padding="@dimen/divider"
+                    android:text="16"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/text_title_size" />
+
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/text_title_size"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/v_recommend_loading_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_black_1000"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_recommend_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                app:viewAspectRatio="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_recommend_loading"
+                android:layout_centerInParent="true"
+                android:text="@string/loading"
+                android:textColor="@color/loading_green"
+                android:textSize="@dimen/text_title_middle_size"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

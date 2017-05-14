@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_appbar" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/divider">
+
+            <TextView
+                android:id="@+id/tv_calendar_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/divider"
+                android:background="@drawable/bg_black_circle_rect"
+                android:padding="@dimen/divider"
+                android:text="2017"
+                android:textColor="@color/md_white_1000" />
+
+            <TextView
+                android:id="@+id/tv_calendar_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/divider"
+                android:layout_marginRight="@dimen/divider"
+                android:background="@drawable/bg_black_circle_rect"
+                android:padding="@dimen/divider"
+                android:text="04"
+                android:textColor="@color/md_white_1000" />
+
+            <TextView
+                android:id="@+id/tv_calendar_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_black_circle_rect"
+                android:padding="@dimen/divider"
+                android:text="16"
+                android:textColor="@color/md_white_1000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_calendar_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/divider"
+                android:background="@drawable/bg_black_circle_rect"
+                android:padding="@dimen/divider"
+                android:text="@string/confirm"
+                android:textColor="@color/md_white_1000" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.squareup.timessquare.CalendarPickerView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:tsquare_dayBackground="@color/md_white_1000"
+        app:tsquare_dayTextColor="@color/md_grey_900"
+        app:tsquare_displayHeader="true"
+        app:tsquare_dividerColor="@color/md_grey_500"
+        app:tsquare_headerTextColor="@color/md_grey_900"
+        app:tsquare_titleTextColor="@color/md_black_1000" />
+
+
+</android.support.design.widget.CoordinatorLayout>

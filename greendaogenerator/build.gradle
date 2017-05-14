@@ -1,0 +1,26 @@
+project(':greendaogenerator'){
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    mainClassName = "com.greendao.GreenDaoGenerator"
+
+    def outputDir="../app/src/main/java-gen"
+
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+    }
+
+    task createDocs{
+        def docs = file(outputDir)
+        docs.mkdirs()
+    }
+
+    run{
+        args outputDir
+    }
+
+    sourceCompatibility = "1.7"
+    targetCompatibility = "1.7"
+}
+
+

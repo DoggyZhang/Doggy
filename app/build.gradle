@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.news"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // 测试
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.orhanobut:logger:1.15'
+    // Compat Package
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.android.support:support-annotations:24.2.1'
+    compile 'com.android.support:multidex:1.0.1'
+    // Material Design
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:palette-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.squareup:android-times-square:1.6.5@aar'
+    // Net
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:retrofit-adapters:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    // Image
+    compile 'com.facebook.fresco:fresco:0.8.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    // Data Analysis
+    compile 'com.google.code.gson:gson:2.2.4'
+    // Async
+    compile 'io.reactivex:rxjava:1.2.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
+    // Util
+    compile 'com.google.guava:guava:16.0.1'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile project(':reslib')
+    // DB
+    compile 'de.greenrobot:greendao:2.1.0'
+    // weibo
+    compile 'com.sina.weibo.sdk:core:1.0.0:openDefaultRelease@aar'
+    //    compile files('src/main/libs/weiboSDKCore_3.1.4.jar')
+    //    compile files('src/main/libs/weiboSDKCore_3.1.2.jar')
+}

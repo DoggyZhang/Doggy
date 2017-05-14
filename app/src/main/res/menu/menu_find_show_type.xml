@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_show_type_col_1"
+        android:title="1 列"></item>
+    <item
+        android:id="@+id/menu_show_type_col_2"
+        android:title="2 列"></item>
+
+    <item
+        android:id="@+id/menu_show_type_col_3"
+        android:title="3 列"></item>
+
+    <item
+        android:id="@+id/menu_show_type_col_4"
+        android:title="4 列"></item>
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_find_show_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/divider"
+            android:layout_marginRight="@dimen/divider"
+            android:background="@drawable/bg_black_circle_rect"
+            android:padding="@dimen/divider"
+            android:text="显示列数："
+            android:textColor="@color/md_white_1000" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_recyclerview" />
+
+</LinearLayout>

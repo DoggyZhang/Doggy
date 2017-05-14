@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_recommend_item_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_black_circle_rect"
+        android:padding="@dimen/divider"
+        android:text="@string/app_name"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/text_title_size" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recommend_item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/text_title_middle_size" />
+
+            <TextView
+                android:id="@+id/tv_recommend_item_who"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/md_grey_900"
+                android:textSize="@dimen/text_title_size" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
